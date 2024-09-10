@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const errorController = require("./controllers/error");
-const User = require("./models/user");
+// const User = require("./models/user");
 
 const app = express();
 
@@ -34,7 +34,7 @@ app.use(errorController.get404);
 
 mongoose
     .connect(
-        "mongodb+srv://oana:Mitricoiu01@cluster0.4esbfu7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+        "mongodb+srv://oana:Mitricoiu01@cluster0.4esbfu7.mongodb.net/shop?retryWrites=true&w=majority&appName=Cluster0"
     )
     .then((result) => {
         console.log("Connected?");
